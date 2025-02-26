@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>33-varinthorn-colmar</title>
+    <script src ="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
     <h1>33-varinthorn-colmar</h1>
+    <header class="sticky top-0 bg-white z-50 shadow-md">
+        <div class="flex justify-between items-center px-6 h-16">
+          <a href="#" class="flex items-center space-x-2 font-semibold text-black">
+            <div class="lg:ml-5 flex items-center justify-center text-[32px] h-16 w-16">
+              <img src="./src/images/ic-logo.svg"
+            </div>
+            <p class="text-[32px]  text-[#4A4A4A]">COLMAR</p>
+            <p class="text-[32px]  text-[#A0A0A0]">ACADEMY</p>
+          </a>
+          <nav class="flex">
+            <a href="#" class="text-black hover:text-gray-400">On campus</a>
+            <a href="#" class="text-black hover:text-gray-400">Online</a>
+            <a href="#" class="text-black hover:text-gray-400">Companies</a>
+            <a href="#" class="text-black hover:text-gray-400">Sign in</a>
+          </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero bg-[#D7D8D7]">
+            <div class="flex flex-col py-4 md:flex-row md:py-8 md:px-6">
+                <img
+                src= "src/images/banner.jpg"
+                alt="Reading"
+                class="w-full md:w-[60vw] h-auto  md:py-8 "
+                 />
+                <div class = "p-6 content-center" >
+                    <p class = "content-center text-4xl font-bold text-[#4A4A4A]">Learn something new everyday</p>
+                    <p class="my-4 text-2xl font-bold  text-[#4A4A4A]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, quia.</p>
+                    <button class ="w-full py-2 my-4 bg-[#4A4A4A] text-white">
+                        Start here
+                    </button>
+                </div>
+            </div>
+        </section>
+            
+    
+    </main>
 </body>
 </html>
