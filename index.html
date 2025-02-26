@@ -8,17 +8,19 @@
     <link rel="stylesheet" href="./src/style.css" />
 </head>
 <body>
-    <h1>33-varinthorn-colmar</h1>
-    <header class="sticky top-0 bg-white z-50 shadow-md">
-        <div class="flex justify-between items-center px-6 h-16">
+    <!-- <h1>33-varinthorn-colmar</h1> -->
+
+    <!-- Nav bar desktop -->
+    <header class="hidden sm:flex sticky top-0 bg-white z-50 shadow-md">
+        <div class="flex justify-between items-center px-6 h-16 w-full">
           <a href="#" class="flex items-center space-x-2 font-semibold text-black">
             <div class="lg:ml-5 flex items-center justify-center text-[32px] h-16 w-16">
-              <img src="./src/images/ic-logo.svg"
+              <img src="./src/images/ic-logo.svg"/>
             </div>
             <p class="text-[32px]  text-[#4A4A4A]">COLMAR</p>
             <p class="text-[32px]  text-[#A0A0A0]">ACADEMY</p>
           </a>
-          <nav class="flex">
+          <nav class="flex gap-4 pr-2">
             <a href="#" class="text-black hover:text-gray-400">On campus</a>
             <a href="#" class="text-black hover:text-gray-400">Online</a>
             <a href="#" class="text-black hover:text-gray-400">Companies</a>
@@ -27,9 +29,23 @@
         </div>
     </header>
 
+    <!-- Nav bar mobile -->
+    <header class="sm:hidden sticky top-0 bg-white z-50 shadow-md">
+        <div class="flex justify-between items-center px-6 h-16 w-full">
+            <nav class="flex justify-between gap-4 pr-2 w-full">
+                <a href="#" ><img src="./src/images/ic-logo.svg"></a>
+                <a href="#" ><img src="./src/images/ic-on-campus.svg"></a>
+                <a href="#" ><img src="./src/images/ic-online.svg"></a>
+                <a href="#" ><img src="./src/images/ic-login.svg"></a>
+            
+            </nav>
+        </div>
+    </header>
+
     <main>
+        <!-- Section hero mobile desktop -->
         <section class="hero bg-[#D7D8D7]">
-            <div class="flex flex-col py-8 px-4 md:flex-row md:py-8 md:px-6">
+            <div class="flex flex-col py-8 px-4 sm:flex-row sm:py-8 sm:px-6">
                 <img
                 src= "src/images/banner.jpg"
                 alt="Group Learning"
@@ -44,23 +60,48 @@
                 </div>
             </div>
         </section>
+        <!-- Section information desktop -->
         <section class="information bg-[#F3F5F6]">
-            <div class = "flex flex-col md:flex-row">
-                <div class= "md:py-8 md:px-6">
+            <div class = "hidden sm:flex flex-col">
+                <div class = "py-8 px-6">
                     <img
                     src= "./src/images/information-main.jpg"
                     alt="Information"
-                    class="w-full md:w-[60vw] h-auto  "/>
+                    class="w-full sm:w-[60vw] h-auto  "/>
                     <p class= "text-3xl font-bold text-[#4A4A4A]">It doesn't hurt to keep practicing</p>
-                    <p class= "w-[60vw] my-6 text-base text-[#4A4A4A]">Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestiae dignissimos ut quisquam voluptatibus eos quidem earum praesentium, quos alias.</p>
+                    <p class= "sm:w-[60vw] my-6 text-base text-[#4A4A4A]">Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestiae dignissimos ut quisquam voluptatibus eos quidem earum praesentium, quos alias.</p>
                     <p class= "text-sm">Emanuel, Sr. Strategist at Hiring.com</p>
                 </div>
-                <div>
-                    <div class = "flex flex-col py-8 px-6 md:flex-row">
+                <div class= "sm:py-8 px-6">
+                    <div class = "flex flex-col py-8 px-6">
                         <img
                         src= "./src/images/information-orientation.jpg"
                         alt="Information"
-                        class="w-full md:w-[16vw] h-auto  md:py-8 md:px-6 "/>
+                        class=" w-full w-[16vw] h-auto  py-8 px-6 "/>
+                        <div class ="justify-center content-center py-8 px-6 sm:w-[24vw] sm:py-8 sm:px-6">
+                            <p class = "text-2xl text-[#4A4A4A] font-bold">Orientation date</p>
+                            <p>Tue 10/11</p>
+                            <a href= "#" class="text-blue-700">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Section information mobile -->
+            <div class = "sm:hidden flex flex-col sm:flex-row">
+                <div>
+                    <div class = "flex flex-col py-8 px-6 sm:flex-row">
+                        <img
+                        src= "./src/images/information-orientation.jpg"
+                        alt="Information"
+                        class=" w-full w-[16vw] h-auto  py-8 px-6 "/>
                         <div class ="justify-center content-center py-8 px-6 md:w-[24vw] md:py-8 md:px-6">
                             <p class = "text-2xl text-[#4A4A4A] font-bold">Orientation date</p>
                             <p>Tue 10/11</p>
@@ -77,7 +118,8 @@
                 </div>
             </div>
         </section>
-        <section class="course pb-8 px-[72px] bg-[#EAECED]">
+        <!-- Section course desktop -->
+        <section class="course hidden sm:grid pb-8 px-[72px] bg-[#EAECED]">
             <h2 class="py-8 text-3xl font-bold text-[#4A4A4A] text-center">Start Learning</h2>
             <div class="grid grid-cols-3 gap-8">
                 <div class = "bg-white">
@@ -115,13 +157,32 @@
                 </div>
             </div>
         </section>
+        <!-- Section course mobile -->
+        <section class="course sm:hidden  pb-8 px-[16px] bg-white">
+            <h2 class="py-8 text-3xl font-bold text-[#4A4A4A] text-center">Start Learning</h2>
+            <div class="bg-[#EAECED] m-4 justify-start">
+                <p class ="py-4 px-4 text-2xl font-bold text-[#4A4A4A]">Software engineering</p>
+            </div>
+            <div class="bg-[#EAECED] m-4 justify-start">
+                <p class ="py-4 px-4 text-2xl font-bold text-[#4A4A4A]">Software engineering</p>
+            </div>
+            <div class="bg-[#EAECED] m-4 justify-start">
+                <p class ="py-4 px-4 text-2xl font-bold text-[#4A4A4A]">Software engineering</p>
+            </div>
+            <div class="bg-[#EAECED] m-4 justify-start">
+                <p class ="py-4 px-4 text-2xl font-bold text-[#4A4A4A]">Software engineering</p>
+            </div>
+        </section>
+
+        <!-- Section Thesis desktop -->
         <section class="Thesis bg-[#F3F5F6]">
-            <div class = "flex flex-col md:flex-row">
-                <div class= "md:py-8 md:px-6">
+            <div class = "hidden sm:flex flex-row">
+                <h2 class="py-8 text-3xl font-bold text-[#4A4A4A] text-center">Thesis Exhibit</h2>
+                <div class= "md:py-8 md:px-6 flex-col md:flex-row">
                     <video
                     src= "./src/videos/thesis.mp4"
-                    alt="Thesis"
-                    class="w-full md:w-[60vw] h-auto"/>
+                    class="w-full md:w-[60vw] h-auto"></video>
+
                     <p class= "text-3xl font-bold text-[#4A4A4A]">Reimagine urban</p>
                     <p class= "w-[60vw] my-6 text-base text-[#4A4A4A]">Lorem ipsum dolor sit amet consectetur adipisicing elit. A molestiae dignissimos ut quisquam voluptatibus eos quidem earum praesentium, quos alias.</p>
                 </div>
@@ -134,7 +195,7 @@
                         <div class ="justify-center content-center py-8 px-6 md:w-[24vw] md:py-8 md:px-6">
                             <p class = "text-2xl text-[#4A4A4A] font-bold">Orientation date</p>
                             <p>Tue 10/11</p>
-                            <a href= "#" class="text-blue-700">Read more</a>
+                
                         </div>
 
                     </div>
@@ -145,6 +206,15 @@
                         
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Section Thesis desktop -->
+        <section class="Thesis
+            <div class= "sm:hidden md:py-8 md:px-6">
+                <video
+                src= "./src/videos/thesis.mp4"
+                class="w-full md:w-[60vw] h-auto"></video>
             </div>
         </section>
     
